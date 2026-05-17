@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Weather App</h1>
+                <p class="tagline">Check the weather anywhere</p>
+            </div>
+
+            <div class="search-section">
+                <div class="search-box">
+                    <input class="search-input" type="text" placeholder="Enter city name..." id="searchInput">
+                    <button class="search-btn" id="searchBtn">
+                        <span>Search</span>
+                    </button>
+                </div>
+                <div class="error-message" id="errorMessage"></div>
+            </div>
+
+            <div id="weatherContainer" class="weather-container">
+                <div class="loading-spinner" id="loadingSpinner">
+                    <div class="spinner"></div>
+                </div>
+                <div class="weather-content" id="weatherContent" style="display: none;">
+                    <div class="location-info">
+                        <h2 id="cityHeader"></h2>
+                        <p id="dateTime"></p>
+                    </div>
+
+                    <div class="weather-main">
+                        <div class="temperature-section">
+                            <div class="weather-icon" id="weatherIcon"></div>
+                            <div class="temperature-box">
+                                <span id="temperature" class="temperature"></span>
+                                <span class="unit">°C</span>
+                            </div>
+                        </div>
+                        <div class="weather-description">
+                            <p id="weatherDescriptionHeader"></p>
+                            <p id="feelsLike"></p>
+                        </div>
+                    </div>
+
+                    <div class="weather-details">
+                        <div class="detail-card">
+                            <div class="detail-icon">💧</div>
+                            <div class="detail-info">
+                                <p class="detail-label">Humidity</p>
+                                <p id="humidity" class="detail-value"></p>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <div class="detail-icon">💨</div>
+                            <div class="detail-info">
+                                <p class="detail-label">Wind Speed</p>
+                                <p id="windSpeed" class="detail-value"></p>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <div class="detail-icon">🔵</div>
+                            <div class="detail-info">
+                                <p class="detail-label">Pressure</p>
+                                <p id="pressure" class="detail-value"></p>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <div class="detail-icon">👁️</div>
+                            <div class="detail-info">
+                                <p class="detail-label">Visibility</p>
+                                <p id="visibility" class="detail-value"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
